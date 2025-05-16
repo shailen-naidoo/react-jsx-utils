@@ -47,7 +47,7 @@ function SwitchCase({ children, expression }: SwitchCaseProps): ReactNode {
     return matchingChild.props.children;
   }
 
-  const defaultChild = childrenArray.find((child) => child.props['data-default']);
+  const defaultChild = childrenArray.find((child) => 'data-default' in child.props);
 
   if (defaultChild) {
     return defaultChild.props.children;
