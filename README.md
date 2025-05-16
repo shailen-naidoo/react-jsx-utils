@@ -7,6 +7,10 @@ I've always preferred Vue.js, largely because of its use of HTML templates. Reac
 
 To address this, I created react-jsx-utils, a small utility library that helps make JSX feel a bit more like templating—bringing some of the simplicity I love from Vue.
 
+```shell
+npm i git@github.com:shailen-naidoo/react-jsx-utils.git
+```
+
 #### ✨ Conditional Rendering
 ##### IfElse
 
