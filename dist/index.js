@@ -15,7 +15,7 @@ function SwitchCase({ children, expression }) {
     if (matchingChild) {
         return matchingChild.props.children;
     }
-    const defaultChild = childrenArray.find((child) => child.props.default);
+    const defaultChild = childrenArray.find((child) => 'data-default' in child.props);
     if (defaultChild) {
         return defaultChild.props.children;
     }
