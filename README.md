@@ -146,7 +146,7 @@ const fruits = ['bananas', 'apples', 'oranges'];
 
 function App() {
   return (
-    <Loop condition={fruits}>
+    <Loop collection={fruits}>
       {(fruit) => <p key={fruit}>{fruit}</p>}
     </Loop>
   );
@@ -156,10 +156,14 @@ function App() {
 Supports inline usage as well:
 
 ```jsx
-<Loop
-  condition={fruits}
-  children={(fruit) => <p key={fruit}>{fruit}</p>}
-/>
+function App() {
+  return (
+    <Loop
+      collection={fruits}
+      children={(fruit) => <p key={fruit}>{fruit}</p>}
+    />
+  )
+}
 ```
 
 #### Why This?
