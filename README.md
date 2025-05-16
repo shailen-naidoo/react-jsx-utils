@@ -2,9 +2,8 @@
 
 I've always preferred Vue.js, largely because of its use of HTML templates. React’s JSX, while powerful, often feels verbose and unintuitive for common UI patterns. Since working more with React, I've repeatedly run into frustration when handling things like:
 
-## Conditional rendering
-
-### Looping over components
+1. Conditional rendering
+2. Looping over components
 
 To address this, I created react-jsx-utils, a small utility library that helps make JSX feel a bit more like templating—bringing some of the simplicity I love from Vue.
 
