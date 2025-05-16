@@ -22,3 +22,4 @@ function SwitchCase({ children, expression }) {
     return null;
 }
 export { Loop, IfElse, SwitchCase };
+//# sourceMappingURL=index.js.map
