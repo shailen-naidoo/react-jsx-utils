@@ -190,7 +190,7 @@ function App() {
 #### Conditional rendering + Component looping
 
 ```jsx
-import {} from 'react-jsx-utils'
+import { Loop, IfElse } from 'react-jsx-utils'
 
 function App() {
   const fruits = [
