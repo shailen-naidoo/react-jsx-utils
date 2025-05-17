@@ -12,7 +12,6 @@ declare function IfElse({ children, condition }: IfElseProps): ReactNode;
 interface CaseProps {
     'data-case'?: any;
     'data-default'?: boolean;
-    default?: boolean;
     children: ReactNode;
 }
 interface SwitchCaseProps {
