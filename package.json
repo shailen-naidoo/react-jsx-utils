@@ -1,6 +1,6 @@
 {
   "name": "react-jsx-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple TypeScript utility library built in Cape Town",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -18,10 +18,16 @@
     "lint": "eslint . --ext .ts",
     "format": "prettier --write ."
   },
-  "keywords": ["typescript", "utility", "library"],
+  "keywords": [
+    "typescript",
+    "utility",
+    "library"
+  ],
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {},
   "devDependencies": {
     "typescript": "^5.8.3"
