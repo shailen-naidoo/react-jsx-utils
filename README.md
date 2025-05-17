@@ -69,6 +69,27 @@ function App({ isLoggedIn = false }) {
   );
 }
 ```
+
+Nested IfElse:
+
+```jsx
+import { IfElse } from 'react-jsx-utils'
+
+function App({ isLoggedIn = false, isSuperAdmin = false }) {
+  return (
+    <Container>
+      <IfElse condition={isLoggedIn}>
+        <Home />
+        <IfElse condition={isSuperAdmin}>
+          <SuperAdmin />
+          <Admin /> // This renders
+        </IfElse>
+      </IfElse>
+    </Container>
+  )
+}
+```
+
 ##### SwitchCase
 
 ###### Without JSX Utils
@@ -162,6 +183,61 @@ function App() {
       collection={fruits}
       children={(fruit) => <p key={fruit}>{fruit}</p>}
     />
+  )
+}
+```
+
+#### Conditional rendering + Component looping
+
+```jsx
+import {} from 'react-jsx-utils'
+
+function App() {
+  const fruits = [
+    { label: 'Apples', isVisible: true },
+    { label: 'Bananas', isVisible: false },
+    { label: 'Oranges', isVisible: true },
+  ]
+
+  return (
+    <Container>
+      <Loop collection={fruits}>
+        {(fruit) => (
+          <IfElse condition={fruit.isVisible}>
+            <p>{fruit.label}</p>
+          </IfElse>
+        )}
+      </Loop>
+    </Container>
+  )
+}
+```
+
+```jsx
+import { Loop, IfElse } from 'react-jsx-utils'
+
+function App() {
+  const fruits = [
+    { label: 'Apples', isVisible: true, stores: ['Checkers', 'Woolworths'] },
+    { label: 'Bananas', isVisible: false, stores: ['Checkers', 'Woolworths'] },
+    { label: 'Oranges', isVisible: true, stores: ['Checkers', 'Woolworths'] },
+  ]
+
+  return (
+    <Container>
+      <Loop collection={fruits}>
+        {(fruit, key) => (
+          <IfElse condition={fruit.isVisible} key={key}>
+            <>
+              <p>{fruit.label}</p>
+              <Loop collection={fruit.stores}>
+                {(store, key) => <p key={key}>{store}</p>}
+              </Loop>
+            </>
+          </IfElse>
+        )}
+      </Loop>
+    </Container>
   )
 }
 ```
