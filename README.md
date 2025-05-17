@@ -121,7 +121,7 @@ import { SwitchCase } from 'react-jsx-utils';
 
 function App({ fruit = 'banana' }) {
   return (
-    <SwitchCase condition={fruit}>
+    <SwitchCase expression={fruit}>
       <Apple data-case="apple" />
       <Banana data-case="banana" />  {/* Renders */}
       <Orange data-case="orange" />
@@ -136,7 +136,7 @@ Fallback behavior included:
 ```jsx
 function App({ fruit = 'tomato' }) {
   return (
-    <SwitchCase condition={fruit}>
+    <SwitchCase expression={fruit}>
       <Apple data-case="apple" />
       <Banana data-case="banana" />
       <Orange data-case="orange" />
