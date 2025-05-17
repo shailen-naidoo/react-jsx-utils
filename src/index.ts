@@ -1,4 +1,4 @@
-import React, { JSX, ReactElement, ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 
 interface LoopProps<T> {
   collection: T[]
@@ -27,7 +27,6 @@ function IfElse({ children, condition }: IfElseProps): ReactNode {
 interface CaseProps {
   'data-case'?: any;
   'data-default'?: boolean;
-  default?: boolean;
   children: ReactNode;
 }
 
